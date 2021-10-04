@@ -1,0 +1,76 @@
+
+/* Tablet - header & navbar links & two columns */
+
+@media (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+    h1 {
+        font-size: 205%;
+    }
+
+    .header-flex-h1 {
+        padding-left: 8%;
+      }
+
+    
+   
+
+    .header-flex-time-left-tablet {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 90%;
+        padding-top: 15%;
+        padding-left: 5%;
+      }
+
+      .header-flex-time {
+        display: none;
+      }
+
+      .header-flex-weather {
+          width: 80% ;
+      }
+
+
+
+    .nav-bar-menu-icon {
+        display: none;
+      }
+    .nav-bar-flex-links {
+        display: flex;
+    }
+
+}
+
+/* Laptop - nav search bar & bottom section (three columns) */
+
+@media (min-width: 1024px) {
+    body {
+        background-color: brown;
+    }
+    h1 {
+        font-size: 250%;
+    }
+    #search-field {
+        display: block;
+      }
+    .nav-bar-flex-search{
+        display: flex;
+    }
+}
+
+
+/* Maximum resolution */
+
+@media (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+    h1 {
+        font-size: 300%;
+    }
+}
+
+

@@ -8,111 +8,117 @@
     <link rel="stylesheet" type= "text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type= "text/css" href="css/fonts.css">
     <link rel="stylesheet" type= "text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type= "text/css" href="css/media-query.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <main>
-        <header>
-            <div class="header-flex">
+    <header>
+        <div class="header-flex">
+            <div class="header-flex-time-left-tablet">
+                <p>
+                    October, 5, 2021
+                </p>
+            </div>
+            <div class="header-flex-h1">
+                <h1>Shelbyville Times</h1>
+            </div>
+            <div class="header-widgets-column-flex">
+                <div class="header-flex-weather">
+                    <img src="images/weather-icon.png" alt="weather-icon" width="35%">
+                </div>
                 <div class="header-flex-time">
                     <p>
                         October, 5, 2021
                     </p>
                 </div>
-                <div class="header-flex-h1">
-                    <h1>Shelbyville Times</h1>
-                </div>
-                <div class="header-flex-weather">
-                    <img src="images/weather-icon.png" alt="weather-icon" width="25%">
-                </div>        
-            </div>
-        </header>
-        <nav id="menu">
-            <div class="nav-bar-flex">
-                <div class="nav-bar-flex-links">
-                    <ul>
-                        <li><a href="#">News</a>
-                        <li><a href="#">Opinion</a></li>
-                        <li><a href="#">Sport</a></li>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">More+</a></li>
-                    </ul>
-                </div>
-                <div class="nav-bar-flex-search">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </div>
-            </div>
-        </nav>
-        <div class="first-second-news-flex">
-            <div class="first-news-article-flex">
-                <article>
-                    <h2 id="prueba">Old man yells at cloud</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam
-                        ad eum, similique, eos fugit sint mollitia, laboriosam placeat corporis
-                        pariatur voluptatum? Neque odio debitis reiciendis rem provident rerum optio!
-                    </p>
-                </article>
-            </div>
-            <div class="second-news-aside-flex">
-                <aside>
-                    <div class="aside-top-news-flex">
-                        <h3>Citizens get rid of the haunted lemon tree</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam
-                            ad eum, similique, eos fugit sint mollitia, laboriosam placeat corporis
-                            pariatur voluptatum? Neque odio debitis reiciendis rem provident rerum optio!
-                        </p>
-                    </div>
-                    <div class="aside-bottom-news-flex">
-                        <h3>Experts say lemons are unhealthy</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam
-                            ad eum, similique, eos fugit sint mollitia, laboriosam placeat corporis
-                            pariatur voluptatum? Neque odio debitis reiciendis rem provident rerum optio!
-                        </p>
-                    </div>
-                </aside>
             </div>
         </div>
-        <section>
-            <div class="third-news-section-flex">
-                <div class="third-news-flex" id="third-news-1">
-                    <h4>Doctors recommend marry our cousins</h4>
+    </header>
+    <nav id="menu">
+        <div class="nav-bar-flex">
+            <span class="nav-bar-menu-icon"><img src="images/white-hamburger-menu-icon.png" alt="white-hamburger-menu-icon" width="25px"></span>
+            <div class="nav-bar-flex-links">     
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">More+</a></li>
+                </ul>
+            </div>
+            <div class="nav-bar-flex-search">
+                <input id="search-field" type="text" placeholder="Search.." name="search">
+                <span class="nav-bar-search-icon"><button type="submit"><i class="fa fa-search"></i></button></span>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-container"> 
+            <div class="first-second-news-flex">
+                <div class="first-news-article-flex">
+                    <article>
+                        <h2>Old man yells at cloud</h2>
+                        <p class="paragraph-news-padding">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quisquam
+                            ad eum, similique, eos fugit sint.
+                        </p>
+                    </article>
                 </div>
-                <div class="third-news-flex" id="third-news-2">
-                    <h4>The dangerous monorail arrives i Springfield</h4>
-                </div>
-                <div class="third-news-flex" id="third-news-3">
-                    <h4>The secret life of Shelbyville Manhattan</h4>
-                </div>
-                <div class="third-news-flex" id="third-news-4">
-                    <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                </div>
-                <div class="third-news-flex" id="third-news-5">
-                    <h4>Lorem ipsum dolor sit amet consectetur</h4>
-                </div>
-                <div class="third-news-flex" id="third-news-6">
-                    <h4>Lorem ipsum dolor sit amet consectetur</h4>
+                <div class="second-news-aside-flex">
+                    <aside>
+                        <div class="aside-top-news-flex">
+                            <h3>Citizens get rid of the haunted lemon tree</h3>
+                            <p class="paragraph-news-padding">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            </p>
+                        </div>
+                        <div class="aside-bottom-news-flex">
+                            <h3>Experts say lemons are unhealthy</h3>
+                            <p class="paragraph-news-padding">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            </p>
+                        </div>
+                    </aside>
                 </div>
             </div>
-        </section>
-        <section>
-            <h4>Most viewed</h4>
-            <ul>
-                <li>Old man yells at cloud</li>
-                <li>Citizens get rid of the haunted lemon tree</li>
-                <li>Experts say lemons are unhealthy</li>
-                <li>Doctors recommend marry our cousins</li>
-                <li>The secret life of Shelbyville Manhattan</li>
-                <li>The dangerous monorail arrives at Springfield</li>
-            </ul>
-        </section>
-        <footer>
-
-
-        </footer>
-    </main>
+            <section>
+                <h4 id="bottom-section-title">Most viewed:</h4>
+                <div class="third-news-section-flex">
+                    <div class="third-news-flex" id="third-news-1">
+                        <h4>Doctors recommend marry our cousins</h4>
+                    </div>
+                    <div class="third-news-flex" id="third-news-2">
+                        <h4>The dangerous monorail arrives in Springfield</h4>
+                    </div>
+                    <div class="third-news-flex" id="third-news-3">
+                        <h4>The secret life of Shelbyville Manhattan</h4>
+                    </div>
+                    <div class="third-news-flex" id="third-news-4">
+                        <h4>Lorem ipsum dolor sit amet consectetur</h4>
+                    </div>
+                    <div class="third-news-flex" id="third-news-5">
+                        <h4>Lorem ipsum dolor sit amet consectetur</h4>
+                    </div>
+                    <div class="third-news-flex" id="third-news-6">
+                        <h4>Lorem ipsum dolor sit amet consectetur</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main> 
+    <footer>
+        <p>
+            © 2021 Shelbyville Times Company 
+        </p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Work with us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </footer>   
 </body>
 </html>
