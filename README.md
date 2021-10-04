@@ -5,7 +5,7 @@
 **OBJECTIVE**
 
 Create a cover of a newspaper (main page) trying not to copy any particular newspaper, but instead configure a cover design using FlexBox as the main tool for creating a Responsive Design following the Mobile First concept.
-The layout of the journal must comply with the following [Layout Design] [df1] format and the result must be uploaded to a new repository on Github 
+The layout of the journal must comply with the following [Layout Design][df1] format and the result must be uploaded to a new repository on Github 
 
 **REPOSITORY**
 
