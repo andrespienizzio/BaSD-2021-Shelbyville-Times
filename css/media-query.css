@@ -2,16 +2,16 @@
 /* Tablet - header & navbar links & two columns */
 
 @media (min-width: 768px) {
-    body {
-        background-color: blue;
-    }
-    h1 {
-        font-size: 205%;
-    }
+ 
 
-    .header-flex-h1 {
-        padding-left: 8%;
-      }
+
+h1 {
+  font-size: 205%;
+}
+
+.header-flex-h1 {
+  padding-left: 8%;
+    }
 
     .header-flex-time-left-tablet {   /* i wonder if i can use order*/
         display: block;
@@ -91,9 +91,7 @@
 /* Laptop - nav search bar */
 
 @media (min-width: 1024px) {
-    body {
-        background-color: brown;
-    }
+  
     h1 {
         font-size: 250%;
     }
@@ -129,9 +127,7 @@
 /* Maximum resolution - bottom section (three columns) */
 
 @media (min-width: 1200px) {
-    body {
-        background-color: green;
-    }
+    
     h1 {
         font-size: 300%;
     }
