@@ -8,7 +8,7 @@
   }
   
   .header-flex-h1 {
-    padding-left: 8%;
+    padding-left: 10%;
   }
   
   .header-flex-time-left-tablet {   /* i wonder if i can use order*/
@@ -16,8 +16,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 90%;
-    padding-top: 15%;
-    padding-left: 5%;
   }
   
   .header-flex-time {
@@ -129,10 +127,7 @@
   }
 
   .header-flex-time-left-tablet {
-       
     font-size: 110%;
-    padding-top: 15%;
-    padding-left: 5%;
   }
 
   .header-flex-weather {
