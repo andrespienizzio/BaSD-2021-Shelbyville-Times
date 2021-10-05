@@ -229,10 +229,7 @@ footer ul li {
   text-shadow: 2px 2px 3px black;
 }
 
-.third-news-section-flex-main-container {
-  display: flex;
-  flex-direction: column;
-}
+
 
 #third-news-1 {
   background-image: url(../images/img-4.jpg);

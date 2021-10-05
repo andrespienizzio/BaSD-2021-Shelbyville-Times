@@ -155,23 +155,24 @@
     height: 300px;
   }
 
+  .third-news-section-flex-main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
   .third-news-section-flex-container-a {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
   }
 
   .third-news-section-flex-container-b {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
   }
 
   .third-news-section-flex-container-c {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    flex-wrap: nowrap;
   } 
 
 }
