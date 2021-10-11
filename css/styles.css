@@ -97,9 +97,7 @@ footer ul li {
   display: none;
 } 
 
-.nav-bar-menu-icon {
-  padding-left: 10px;
-}
+
 
 .nav-bar-search-icon {
   padding-right: 10px;
@@ -265,4 +263,15 @@ footer ul li {
   font-weight: bold;
   font-size: 100%;
   text-shadow: none;
+}
+
+
+
+#wheater-icon {
+  width: 35%;
+}
+
+#nav-bar-menu-icon {
+  padding-left: 10px;
+  width: 30px;
 }
