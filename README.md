@@ -49,12 +49,12 @@ https://andrespienizzio.github.io/shelbyville-times/
 #### UPDATE -FIXES-
 After the feedback from the tutors, certain changes were made to improve the content of the page and the repository in general:
 
-* Updated README format.
-* Fixed indentations problems in CSS stylesheets.
+* Updated README format. [✔]
+* Fixed indentations problems in CSS stylesheets. [✔]
 * Changed some class for id selectors. 
 * Changed CSS properties order. 
-* Fixed html errors related with the icons.
-* Fixed left align in big screens.
+* Fixed html errors related with the icons. [✔]
+* Fixed left align in big screens. [✔]
 
 ---
 
