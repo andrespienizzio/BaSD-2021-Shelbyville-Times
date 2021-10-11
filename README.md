@@ -53,7 +53,7 @@ After the feedback from the tutors, certain changes were made to improve the con
 * Fixed indentations problems in CSS stylesheets.
 * Changed some class for id selectors. 
 * Changed CSS properties order. 
-* Fixed other errors in the html found thanks to the use of online validators.
+* Fixed html errors related with the icons.
 * Fixed left align in big screens.
 
 ---
