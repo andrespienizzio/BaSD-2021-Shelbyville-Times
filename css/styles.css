@@ -138,17 +138,26 @@ footer ul li {
   flex-direction: column;
 }
 
-.main-container {
+#main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   width: 90%;
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 10px;
-  padding-left: 1%;
+  padding-left: 3%;
+}
+
+#bottom-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  text-align: center;
 }
 
 .first-second-news-flex {
@@ -264,7 +273,6 @@ footer ul li {
   font-size: 100%;
   text-shadow: none;
 }
-
 
 
 #wheater-icon {
