@@ -51,13 +51,10 @@ After the feedback from the tutors, certain changes were made to improve the con
 
 * Updated README format. [✔]
 * Fixed indentations problems in CSS stylesheets. [✔]
-* Changed some class for id selectors. 
-* Changed CSS properties order. 
+* Changed some class for id selectors. [✔]
+* Changed CSS properties order. [✔]
 * Fixed html errors related with the icons. [✔]
-* Fixed left align in big screens. [✔] * 
-
-[*] The proposed solution does not seem optimal since the main image is distorted when enlarged, but it is the only temporary 
-solution that I found for now without having to change the entire container system.
+* Fixed left align in big screens. [✔] 
 
 ---
 
