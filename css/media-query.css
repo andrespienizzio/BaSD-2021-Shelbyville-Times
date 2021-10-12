@@ -35,6 +35,9 @@
   
   #first-second-news-flex {
     display: flex;
+    align-content: flex-end;
+    align-items: stretch;
+    justify-content: center;
     font-size: 90%;
   }   
   
@@ -62,12 +65,12 @@
     font-size: 110%;
   }
   
-  .third-news-section-flex-container-a {
+  #third-news-section-flex-container-a {
     display: flex;
     gap: 5%;
   }
   
-  .third-news-section-flex-container-b {
+  .third-news-section-flex-container-others {
     display: flex;
     gap: 5%;
   }
@@ -76,8 +79,8 @@
     display: flex;
     gap: 5%;
   } 
+} 
 
-}
 
 /* Laptop - nav search bar */
 
@@ -150,25 +153,27 @@
   }
 
   #first-second-news-flex {
+    padding-left: 3%;
     font-size: 120%;
   }
 
   #first-news-article-flex {
-    width: 100%;
+    width: 800px;
     height: auto;
   }
+  
 
   /* If i dont use class in the side news the background image doesnt load */
 
   .aside-top-news-flex {
     font-size: 80%;
-    width: 120%;
+    width: 100%;
     height: 300px;
   }
 
   .aside-bottom-news-flex {
     font-size: 80%;
-    width: 120%;
+    width: 100%;
     height: 300px;
   }
   /*------------------------------------------- */
