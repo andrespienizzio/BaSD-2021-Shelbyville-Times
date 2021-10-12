@@ -58,6 +58,41 @@ footer ul li {
   margin: 5px;
 }
 
+#header-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#header-flex-h1 {
+  padding-left: 5%;
+}
+
+#wheater-icon {
+  width: 35%;
+}
+
+#header-flex-time {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60%;
+  margin-top: -10%;
+}
+
+#header-flex-time-left-tablet {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60%;
+}
+
+#header-widgets-column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 #menu {
   background-color: #000;
   font-weight: bold;
@@ -93,6 +128,11 @@ footer ul li {
   height: 55px;
 }
 
+#nav-bar-menu-icon {
+  padding-left: 10px;
+  width: 30px;
+}
+
 #nav-bar-flex-links {
   display: none;
 } 
@@ -103,37 +143,6 @@ footer ul li {
 
 #search-field {
   display: none;
-}
-
-#header-flex {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#header-flex-h1 {
-  padding-left: 5%;
-}
-
-#header-flex-time {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 60%;
-  margin-top: -10%;
-}
-
-#header-flex-time-left-tablet {
-  display: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 60%;
-}
-
-#header-widgets-column-flex {
-  display: flex;
-  flex-direction: column;
 }
 
 #main-container {
@@ -147,15 +156,6 @@ footer ul li {
   max-width: 100%;
   margin: 10px;
   padding-left: 3%;
-}
-
-#bottom-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: stretch;
-  text-align: center;
 }
 
 #first-second-news-flex {
@@ -232,10 +232,29 @@ footer ul li {
   background-image: url(../images/img-3.jpg);
 } 
 */
+
 /*------------------------------------------- */
 
 .paragraph-news-padding {
   padding-left: 10px;
+}
+
+#bottom-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+#bottom-section-title {
+  color: #000;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 100%;
+  text-shadow: none;
 }
 
 .third-news-flex {
@@ -274,23 +293,4 @@ footer ul li {
 
 #third-news-6 {
   background-image: url(../images/img-9.jpg);
-}
-
-#bottom-section-title {
-  color: #000;
-  text-decoration: underline;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 100%;
-  text-shadow: none;
-}
-
-
-#wheater-icon {
-  width: 35%;
-}
-
-#nav-bar-menu-icon {
-  padding-left: 10px;
-  width: 30px;
 }
