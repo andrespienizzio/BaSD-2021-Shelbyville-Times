@@ -1,4 +1,4 @@
-/* Tablet - header & navbar links & two columns */
+/* Tablet -header & navbar links & two columns */
 
 @media (min-width: 768px) {
 
@@ -6,22 +6,22 @@
     font-size: 205%;
   }
   
-  .header-flex-h1 {
+  #header-flex-h1 {
     padding-left: 10%;
   }
   
-  .header-flex-time-left-tablet {   /* i wonder if i can use order*/
+  #header-flex-time-left-tablet {   /* i wonder if i can use order*/
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 90%;
   }
   
-  .header-flex-time {
+  #header-flex-time {
     display: none;
   }      
   
-  .header-flex-weather {
+  #header-flex-weather {
     width: 100%;
   }      
   
@@ -29,31 +29,34 @@
     display: none;
   }
 
-  .nav-bar-flex-links {
+  #nav-bar-flex-links {
     display: flex;
   }
   
-  .first-second-news-flex {
+  #first-second-news-flex {
     display: flex;
     font-size: 90%;
   }   
   
-  .first-news-article-flex {
+  #first-news-article-flex {
     width: 90%;
     height: auto;
   }
   
+  /* if i dont use class in the side news the background image doesnt load */
+
   .aside-top-news-flex {
     font-size: 70%;
     width: 100%;
     height: 200px;
   }
-  
+
   .aside-bottom-news-flex {
     font-size: 70%;
     width: 100%;
-    height: 200px;          
+    height: 200px;
   }
+  /*------------------------------------------- */
   
   #third-news-section-flex-main-container {
     font-size: 110%;
@@ -88,18 +91,20 @@
     display: block;
   }
 
-  .nav-bar-flex-search{
+  #nav-bar-flex-search{
     display: flex;
   }
 
-  .first-second-news-flex {
+  #first-second-news-flex {
     font-size: 100%;
   }
 
-  .first-news-article-flex {
+  #first-news-article-flex {
     width: 80%;
     height: auto;
   }
+
+  /* If i dont use class in the side news the background image doesnt load */
 
   .aside-top-news-flex {
     font-size: 70%;
@@ -111,8 +116,8 @@
     font-size: 70%;
     width: 100%;
     height: 300px;
-  } 
-
+  }   
+  /*------------------------------------------- */
 }
 
 /* Maximum resolution - bottom section (three columns) */
@@ -136,22 +141,24 @@
     padding-left: 10%;
   }
 
-  .header-flex-time-left-tablet {
+  #header-flex-time-left-tablet {
     font-size: 110%;
   }
 
-  .header-flex-weather {
+  #header-flex-weather {
       width: 120%;
   }
 
-  .first-second-news-flex {
+  #first-second-news-flex {
     font-size: 120%;
   }
 
-  .first-news-article-flex {
+  #first-news-article-flex {
     width: 100%;
     height: auto;
   }
+
+  /* If i dont use class in the side news the background image doesnt load */
 
   .aside-top-news-flex {
     font-size: 80%;
@@ -164,6 +171,10 @@
     width: 120%;
     height: 300px;
   }
+  /*------------------------------------------- */
+
+
+
 
   #third-news-section-flex-main-container {
     display: flex;
@@ -171,21 +182,14 @@
     align-items: stretch;
   }
 
-  .third-news-section-flex-container-a {
+  #third-news-section-flex-container-a {
     display: flex;
     flex-direction: column;
   }
 
-  .third-news-section-flex-container-b {
+  .third-news-section-flex-container-others {
     display: flex;
     flex-direction: column;
     padding-left: 5%;
   }
-
-  .third-news-section-flex-container-c {
-    display: flex;
-    flex-direction: column;
-    padding-left: 5%;
-  } 
-
 } 
