@@ -4,9 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shelbyville Times | Subscribe</title>
+    <link rel="stylesheet" type= "text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type= "text/css" href="css/fonts.css">
+    <link rel="stylesheet" type= "text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type= "text/css" href="css/media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/favicom.ico" sizes="16x16">
 </head>
 <body>
-    
+    <header>
+        <div id="header-flex">
+            <div id="header-flex-time-left-tablet">
+                <p>
+                    October, 5, 2021
+                </p>
+            </div>
+            <div id="header-flex-h1">
+                <h1>Shelbyville Times</h1>
+            </div>
+            <div id="header-widgets-column-flex">
+                <div id="header-flex-weather">
+                    <img id="wheater-icon" src="images/weather-icon.png" alt="weather-icon">
+                </div>
+                <div id="header-flex-time">
+                    <p>
+                        October, 5, 2021
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav id="menu">
+        <div id="nav-bar-flex">
+            <img id="nav-bar-menu-icon" src="images/white-hamburger-menu-icon.png" alt="white-hamburger-menu-icon">
+            <div id="nav-bar-flex-links">     
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Opinion</a></li>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">More+</a></li>
+                </ul>
+            </div>
+            <div id="nav-bar-flex-search">
+                <input id="search-field" type="text" placeholder="Search.." name="search">
+                <span id="nav-bar-search-icon"><button type="submit"><i class="fa fa-search"></i></button></span>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <h2>Subscribe to Shelbyville Times</h2>
+            <form>
+                <div id="form-container">
+                    <div class="colum-container">
+                        <div>
+                            <input type="text" name="name">
+                            <label>Full Name:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="email">
+                            <label>Email:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="password">
+                            <label>Password:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="confirm-password">
+                            <label>Confirm Password:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="age">
+                            <label>Age:</label>
+                        </div>
+                    </div>
+                    <div class="colum-container">
+                        <div>
+                            <input type="text" name="phone-number">
+                            <label>Phone Number:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="address">
+                            <label>Address:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="city">
+                            <label>City:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="postal-code">
+                            <label>Postal Code:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="id-number">
+                            <label>ID Number:</label>
+                        </div>
+                    </div>
+                </div>
+                <input class="button" type="submit" value="Send">
+            </form>
+        </div>
+
+    </main> 
+    <footer>
+        <p>
+            © 2021 Shelbyville Times Company 
+        </p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Work with us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">Subscribe</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </footer>   
 </body>
 </html>
