@@ -287,7 +287,7 @@ footer ul li {
   color: #fff;
   font-weight: bold;
   text-decoration: underline;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 3px #000;
 }
 
 #third-news-1 {
@@ -313,3 +313,102 @@ footer ul li {
 #third-news-6 {
   background-image: url(../images/img-9.jpg);
 }
+
+    /* --- Subscription page --- */
+
+#form-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  max-width: 100%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: #000;
+}
+
+#form-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin: 1%;
+}
+
+.button {
+  align-self: center;
+  padding: 10px;
+  width: 120px;
+  background-color: #434344;
+  font-size: 100%;
+  font-weight: bold;
+  margin-bottom: 5%;
+  border: 0px;
+  border-radius: 10px;
+  color: #FFF;
+}
+
+label {
+  font-size: 100%;
+  color: #FFFFFF;
+}
+
+input {
+  width: 90%;
+  font-size: 100%;
+  color: #1E2328;
+  margin-bottom: 4%;
+}
+
+/*
+.val-input {
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  color:#1E2328;
+}
+
+#h2-sub-page-link {
+  margin: 0;
+  padding: 0.5em 0;
+  background-color:#C72C41;
+  text-align: center;
+}
+
+#h2-sub-page {
+  margin: 1em 0;
+  text-align: center;
+}
+
+
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 15em;
+  padding: 0 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
