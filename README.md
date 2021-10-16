@@ -84,7 +84,7 @@ The form must contain the following fields:
 * Address 
 * City 
 * Postal code 
-* ID number.
+* ID number
  
  The form also must have a "Send" button and the design must be responsive. Finally, the content of all the fields must be validated using Javascript.
 
