@@ -70,7 +70,7 @@ After the feedback from the tutors, certain changes were made to improve the con
 
 #### OBJECTIVES
 
-The challenge of Week N ° 5 consists of adding a subscription page to the online newspaper developed in 
+The challenge of Week N° 5 consists of adding a subscription page to the online newspaper developed in 
 Week N° 3, keeping the original repository and adding a new html file that maintains the aesthetics of 
 the newspaper and a subscription form for readers.
 
