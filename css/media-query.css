@@ -153,10 +153,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-content: stretch;
     align-items: center;
     text-align: center;
-    padding-left: 10%;
+    padding-left: 6%;
   }
 
   #header-flex-time-left-tablet {
