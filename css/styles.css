@@ -334,10 +334,6 @@ form {
   background-color: #000;
 }
 
-label {
-  padding-bottom: 50px;
-}
-
 #form-title {
   display: flex;
   justify-content: center;
