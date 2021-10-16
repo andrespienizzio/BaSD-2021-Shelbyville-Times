@@ -6,6 +6,8 @@
 
 **(Week N° 4 & 5 below)**
 
+---
+
 #### OBJECTIVES
 
 * Create a cover of a newspaper (main page) trying not to copy any particular newspaper, but instead configure a cover design using FlexBox.
@@ -48,6 +50,8 @@ https://andrespienizzio.github.io/shelbyville-times/
 
 ## WEEK N° 4
 
+---
+
 #### UPDATE -FIXES-
 After the feedback from the tutors, certain changes were made to improve the content of the page and the repository in general:
 
@@ -61,6 +65,8 @@ After the feedback from the tutors, certain changes were made to improve the con
 ---
 
 ## WEEK N° 5
+
+---
 
 #### OBJECTIVES
 
