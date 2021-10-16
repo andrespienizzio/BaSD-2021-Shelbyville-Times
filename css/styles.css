@@ -319,12 +319,13 @@ footer ul li {
 #form-title {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-top: 3%;
   font-size: 200%;
   font-weight: bold;
   text-decoration: underline;
 }
-
 
 form {
   display: flex;
