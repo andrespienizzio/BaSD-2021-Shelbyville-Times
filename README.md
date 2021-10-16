@@ -1,10 +1,11 @@
 # RADIUM ROCKET - BECOME A SOFTWARE DEVELOPER
 
+---
+
 ## WEEK N° 3
 
 **(Week N° 4 & 5 below)**
 
----
 #### OBJECTIVES
 
 * Create a cover of a newspaper (main page) trying not to copy any particular newspaper, but instead configure a cover design using FlexBox.
@@ -12,7 +13,6 @@
 * The layout of the journal must comply with the following [Layout Design][df1] format. 
 * The result must be uploaded to a new repository on Github.
 
----
 #### RESOLUTION
 
 > **Mobile First**
@@ -27,7 +27,6 @@ The site was designed starting with a screen of 480 pixels wide, and then scalin
 
 Flexbox was used to get the site to respond as the size of the screen where the content was displayed changed.
 
----
 #### REPOSITORY 
 
 In the repository you will find the main file, the index.html file, along with a css folder, where the style files, fonts and media queries are. Also, there is a folder called "images" where the images used in the project are located.
@@ -36,7 +35,6 @@ In the repository you will find the main file, the index.html file, along with a
 ```sh
 https://github.com/andrespienizzio/shelbyville-times.git
 ```
----
 
 #### GITHUB PAGES 
 
