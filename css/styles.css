@@ -317,7 +317,6 @@ footer ul li {
 
     /* --- Subscription page --- */
 
-
 form {
   display: flex;
   flex-direction: column;
@@ -400,5 +399,3 @@ input {
   color: #434344;
   margin-bottom: 4%;
 }
-
-
