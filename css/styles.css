@@ -352,6 +352,10 @@ form {
   margin: 1%;
 }
 
+.column-container {
+  width: 90%;
+}
+
 .button {
   align-self: center;
   padding: 10px;
@@ -377,38 +381,4 @@ input {
   margin-bottom: 4%;
 }
 
-/*
-.val-input {
-  margin-top: 0.5em;
-  font-size: 0.8em;
-  color:#1E2328;
-}
-
-#h2-sub-page-link {
-  margin: 0;
-  padding: 0.5em 0;
-  background-color:#C72C41;
-  text-align: center;
-}
-
-#h2-sub-page {
-  margin: 1em 0;
-  text-align: center;
-}
-
-
-
-.form-column {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 15em;
-  padding: 0 1em;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-}
 
