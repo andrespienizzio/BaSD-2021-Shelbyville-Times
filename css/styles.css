@@ -317,16 +317,6 @@ footer ul li {
 
     /* --- Subscription page --- */
 
-#form-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 3%;
-  font-size: 200%;
-  font-weight: bold;
-  text-decoration: underline;
-}
 
 form {
   display: flex;
@@ -344,6 +334,21 @@ form {
   background-color: #000;
 }
 
+label {
+  padding-bottom: 50px;
+}
+
+#form-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 3%;
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 #form-container {
   display: flex;
   flex-flow: wrap;
@@ -352,6 +357,7 @@ form {
   padding-top: 3%;
   padding-bottom: 3%;
   margin: 1%;
+  line-height: 150%;
 }
 
 .column-container {
