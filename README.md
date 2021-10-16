@@ -2,6 +2,8 @@
 
 ## WEEK N° 3
 
+**(Week N° 4 & 5 below)**
+
 ---
 #### OBJECTIVES
 
@@ -46,6 +48,8 @@ https://andrespienizzio.github.io/shelbyville-times/
 ```
 ---
 
+## WEEK N° 4
+
 #### UPDATE -FIXES-
 After the feedback from the tutors, certain changes were made to improve the content of the page and the repository in general:
 
@@ -56,6 +60,38 @@ After the feedback from the tutors, certain changes were made to improve the con
 * Fixed html errors related with the icons. [✔]
 * Fixed left align in big screens. [✔] 
 
+---
+
+## WEEK N° 5
+
+#### OBJECTIVES
+
+The challenge of Week N ° 5 consists of adding a subscription page to the online newspaper developed in 
+Week N° 3, keeping the original repository and adding a new html file that maintains the aesthetics of 
+the newspaper and a subscription form for readers.
+
+The form must contain the following fields: 
+
+* Full name
+* Email 
+* Password and repeat password
+* Age
+* Telephone 
+* Address 
+* City 
+* Postal code 
+* ID number.
+ 
+ The form also must have a "Send" button and the design must be responsive. Finally, the content of all the fields must be validated using Javascript.
+
+#### GITHUB PAGES - SUBSCRIPTION FORM
+
+The github pages tool was used to view the page without needing to download the content of the repository.
+
+**Link:**
+```sh
+https://andrespienizzio.github.io/shelbyville-times/subscription.html
+```
 ---
 
 [df1]: <https://www.w3schools.com/css/css_website_layout.asp>
