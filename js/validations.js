@@ -137,6 +137,25 @@ function phoneFocus() {
 
 // Address
 
+var address = document.getElementById('address');
+var addressError = document.getElementById('addressError');
+
+address.addEventListener('blur', addressBlur);
+function addressBlur() {    
+    let x = address.value;
+    if  (x.length < 6 || x.indexOf(' ') <= 1 || x.search(/\d/) < 0 || x.search(/[a-z]/) < 0) {
+        addressError.style.display = "block";
+        addressError.style.display = "visible";
+        invalid[6] = addressError.textContent;
+    } else {
+        valid[6] = "Address: " + x + '\n';
+    }
+}
+
+address.addEventListener("focus", addressFocus);
+function addressFocus() {
+    addressError.style.display = "none";
+}
 
 // City
 
