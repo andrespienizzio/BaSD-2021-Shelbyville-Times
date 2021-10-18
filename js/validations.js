@@ -1,30 +1,33 @@
 // Subscription form validations
 
-const valid = []
-const invalid = [];
+// Arrays
+
+var valid = [];
+var invalid = [];
 
 // Full Name
  
 var fullName = document.getElementById('fullName');
 var fullNameError = document.getElementById('fullNameError');
 
-fullName.addEventListener('blur', fullNameBlur);
-function fullNameBlur() {    
-    let x = fullName.value;
-    if (x.length < 7 || x.indexOf(' ') <= 0 || x.indexOf(' ') == x.length -1) {        
-        fullNameError.style.display = 'block';
-        fullNameError.style.display = 'visible';
-        invalid[0] = fullNameError.textContent;
-        valid[0] = 'error'; 
-    } else {
-        valid[0] = 'Full Name: ' + x + '\n';
+fullName.onfocus = 
+    function () {
+        fullNameError.style.display = 'none';
     }
-}
+    
+fullName.onblur = 
+    function fullNameBlur() {    
+        var x = fullName.value;
+        if (x.length < 7 || x.indexOf(' ') <= 0 || x.indexOf(' ') == x.length -1) {        
+            fullNameError.style.display = 'block';
+            fullNameError.style.display = 'visible';
+            invalid[0] = fullNameError.textContent;
+            valid[0] = 'error'; 
+        } else {
+            valid[0] = 'Full Name: ' + x + '\n';
+        }
+    } 
 
-fullName.addEventListener('focus', fullNameFocus);
-function fullNameFocus() {
-    fullNameError.style.display = 'none';
-}
 
 // Email
 
@@ -33,7 +36,7 @@ var emailError = document.getElementById('emailError');
 
 email.addEventListener('blur', emailBlur);
 function emailBlur() {    
-    let x = email.value;
+    var x = email.value;
     if (x.indexOf('@') == -1 || x.indexOf('.') == -1 || x.includes(' ') || x.indexOf('.') == email.length - 1){        
         emailError.style.display = 'block';
         emailError.style.display = 'visible';
@@ -56,7 +59,7 @@ var passwordError = document.getElementById('passwordError');
 
 password.addEventListener('blur', passwordBlur);
 function passwordBlur() {    
-    let x = password.value;
+    var x = password.value;
     if  (x.length < 8 || x.search(/\w/) < 0 || x.search(/\d/) < 0) {
         passwordError.style.display = 'block';
         passwordError.style.display = 'visible';
@@ -79,7 +82,7 @@ var confirmPasswordError = document.getElementById('confirmPasswordError');
 
 confirmPassword.addEventListener('blur', confirmPasswordBlur);
 function confirmPasswordBlur() {    
-    let x = confirmPassword.value;
+    var x = confirmPassword.value;
     if  (x !== password.value) {
         confirmPasswordError.style.display = 'block';
         confirmPasswordError.style.display = 'visible';
@@ -102,7 +105,7 @@ var ageError = document.getElementById('ageError');
 
 age.addEventListener('blur', ageBlur);
 function ageBlur() {    
-    let x = age.value;
+    var x = age.value;
     if  (x < 17) {
         ageError.style.display = 'block';
         ageError.style.display = 'visible';
@@ -125,7 +128,7 @@ var phoneError = document.getElementById('phoneError');
 
 phone.addEventListener('blur', phoneBlur);
 function phoneBlur() {    
-    let x = phone.value;
+    var x = phone.value;
     if  (x.length < 7 || x.includes('.') || x.includes('-')) {
         phoneError.style.display = 'block';
         phoneError.style.display = 'visible';
@@ -148,7 +151,7 @@ var addressError = document.getElementById('addressError');
 
 address.addEventListener('blur', addressBlur);
 function addressBlur() {    
-    let x = address.value;
+    var x = address.value;
     if  (x.length < 6 || x.indexOf(' ') <= 1 || x.search(/\d/) < 0 || x.search(/[a-z]/) < 0) {
         addressError.style.display = 'block';
         addressError.style.display = 'visible';
@@ -171,7 +174,7 @@ var cityError = document.getElementById('cityError');
 
 city.addEventListener('blur', cityBlur);
 function cityBlur() {    
-    let x = city.value;
+    var x = city.value;
     if  (x.length < 3) {
         cityError.style.display = 'block';
         cityError.style.display = 'visible';
@@ -194,7 +197,7 @@ var postalCodeError = document.getElementById('postalCodeError');
 
 postalCode.addEventListener('blur', postalCodeBlur);
 function postalCodeBlur() {    
-    let x = postalCode.value;
+    var x = postalCode.value;
     if  (x.length < 3) {
         postalCodeError.style.display = 'block';
         postalCodeError.style.display = 'visible';
@@ -217,7 +220,7 @@ var idNumberError = document.getElementById('idNumberError');
 
 idNumber.addEventListener('blur', idNumberBlur);
 function idNumberBlur() {    
-    let x = idNumber.value;
+    var x = idNumber.value;
     if  (x.length < 7 || x.length > 8 || x.includes('.') || x.includes('-')) {
         idNumberError.style.display = 'block';
         idNumberError.style.display = 'visible';
@@ -276,6 +279,27 @@ function formSend() {
 
 
     } */
+
+
+// Validation model
+
+/* function fullNameBlur() {    
+    var x = fullName.value;
+    if (x.length < 6) {
+        formErrors.classList.display('errorMessage');
+    } else if (x.indexOf(' ') <= 0) {
+        formErrors.fullName = 'Please insert your full name';
+    } else {
+        formErrors.fullName = null;
+    }
+    if (formErrors.fullName){
+        fullNameError.classList.re= 'block';
+        fullNameError.style.display = 'visible';
+        fullNameError.innerHTML = formErrors.fullName;
+    } else {
+        fullNameFocus()
+    }
+} */
 
 
 
