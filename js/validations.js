@@ -1,3 +1,5 @@
+// Subscription form validations
+
 const valid = []
 const invalid = []
 
@@ -75,7 +77,7 @@ var confirmPasswordError = document.getElementById('confirmPasswordError');
 confirmPassword.addEventListener('blur', confirmPasswordBlur);
 function confirmPasswordBlur() {    
     let x = confirmPassword.value;
-    if  (x !== password.value || x.length == 0) {
+    if  (x !== password.value) {
         confirmPasswordError.style.display = "block";
         confirmPasswordError.style.display = "visible";
         invalid[3] = confirmPasswordError.textContent;
@@ -91,6 +93,25 @@ function confirmPasswordFocus() {
 
 // Age
 
+var age = document.getElementById('age');
+var ageError = document.getElementById('ageError');
+
+age.addEventListener('blur', ageBlur);
+function ageBlur() {    
+    let x = age.value;
+    if  (x < 17) {
+        ageError.style.display = "block";
+        ageError.style.display = "visible";
+        invalid[4] = ageError.textContent;
+    } else {
+        valid[4] = "Age: " + x + '\n';
+    }
+}
+
+age.addEventListener("focus", ageFocus);
+function ageFocus() {
+    ageError.style.display = "none";
+}
 
 // Phone Number
 
