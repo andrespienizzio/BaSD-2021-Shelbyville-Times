@@ -1,7 +1,7 @@
 // Subscription form validations
 
 const valid = []
-const invalid = []
+const invalid = [];
 
 // Full Name
  
@@ -15,6 +15,7 @@ function fullNameBlur() {
         fullNameError.style.display = 'block';
         fullNameError.style.display = 'visible';
         invalid[0] = fullNameError.textContent;
+        valid[0] = 'error'; 
     } else {
         valid[0] = 'Full Name: ' + x + '\n';
     }
@@ -37,6 +38,7 @@ function emailBlur() {
         emailError.style.display = 'block';
         emailError.style.display = 'visible';
         invalid[1] = emailError.textContent;
+        valid[1] = 'error'; 
     } else {
         valid[1] = 'Email: ' + x + '\n';
     }
@@ -59,6 +61,7 @@ function passwordBlur() {
         passwordError.style.display = 'block';
         passwordError.style.display = 'visible';
         invalid[2] = passwordError.textContent;
+        valid[2] = 'error'; 
     } else {
         valid[2] = 'Password: ' + x + '\n';
     }
@@ -81,6 +84,7 @@ function confirmPasswordBlur() {
         confirmPasswordError.style.display = 'block';
         confirmPasswordError.style.display = 'visible';
         invalid[3] = confirmPasswordError.textContent;
+        valid[3] = 'error'; 
     } else {
         valid[3] = 'Confirm Password: ' + x + '\n';
     }
@@ -103,6 +107,7 @@ function ageBlur() {
         ageError.style.display = 'block';
         ageError.style.display = 'visible';
         invalid[4] = ageError.textContent;
+        valid[4] = 'error'; 
     } else {
         valid[4] = 'Age: ' + x + '\n';
     }
@@ -125,6 +130,7 @@ function phoneBlur() {
         phoneError.style.display = 'block';
         phoneError.style.display = 'visible';
         invalid[5] = phoneError.textContent;
+        valid[5] = 'error'; 
     } else {
         valid[5] = 'Phone: ' + x + '\n';
     }
@@ -147,6 +153,7 @@ function addressBlur() {
         addressError.style.display = 'block';
         addressError.style.display = 'visible';
         invalid[6] = addressError.textContent;
+        valid[6] = 'error'; 
     } else {
         valid[6] = 'Address: ' + x + '\n';
     }
@@ -169,6 +176,7 @@ function cityBlur() {
         cityError.style.display = 'block';
         cityError.style.display = 'visible';
         invalid[7] = cityError.textContent;
+        valid[7] = 'error'; 
     } else {
         valid[7] = 'City: ' + x + '\n';
     }
@@ -191,6 +199,7 @@ function postalCodeBlur() {
         postalCodeError.style.display = 'block';
         postalCodeError.style.display = 'visible';
         invalid[8] = postalCodeError.textContent;
+        valid[8] = 'error'; 
     } else {
         valid[8] = 'Postal Code: ' + x + '\n';
     }
@@ -213,6 +222,7 @@ function idNumberBlur() {
         idNumberError.style.display = 'block';
         idNumberError.style.display = 'visible';
         invalid[9] = idNumberError.textContent;
+        valid[9] = 'error'; 
     } else {
         valid[9] = 'Id Number: ' + x + '\n';
     }
@@ -225,12 +235,20 @@ function idNumberFocus() {
 
 // Send Button
 
-var sendButton = document.getElementById('sendButton');
-sendButton.addEventListener('click', function(){
-    alert('Hello World!'); });
+var form = document.getElementById('form')
 
+form.addEventListener('submit', formSend);
 
-
+function formSend() {
+    if (valid.includes('error')) {
+        alert(invalid.join(' '));
+    } else if (valid.length == 0) {
+        alert('You have to complete the form before send!');
+    } else {
+        alert('The form was sent successfully!');
+        alert(valid.join(' '));
+    }
+}
 
 
 // BONUS
@@ -263,19 +281,4 @@ sendButton.addEventListener('click', function(){
 
 
     
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
 
