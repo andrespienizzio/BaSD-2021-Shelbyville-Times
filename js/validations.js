@@ -115,6 +115,25 @@ function ageFocus() {
 
 // Phone Number
 
+var phone = document.getElementById('phone');
+var phoneError = document.getElementById('phoneError');
+
+phone.addEventListener('blur', phoneBlur);
+function phoneBlur() {    
+    let x = phone.value;
+    if  (x.length < 7 || x.includes('.') || x.includes('-')) {
+        phoneError.style.display = "block";
+        phoneError.style.display = "visible";
+        invalid[5] = phoneError.textContent;
+    } else {
+        valid[5] = "Phone: " + x + '\n';
+    }
+}
+
+phone.addEventListener("focus", phoneFocus);
+function phoneFocus() {
+    phoneError.style.display = "none";
+}
 
 // Address
 
@@ -133,8 +152,6 @@ function ageFocus() {
 
 // BONUS
 
-    
-    console.log('hola');
 
     /*
 
