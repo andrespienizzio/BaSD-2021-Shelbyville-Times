@@ -344,6 +344,16 @@ form {
   text-decoration: underline;
 }
 
+#bonus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  font-style: italic;
+}
+
 #form-container {
   display: flex;
   flex-flow: wrap;
