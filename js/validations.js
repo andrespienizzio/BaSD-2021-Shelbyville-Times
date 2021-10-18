@@ -190,9 +190,9 @@ function postalCodeBlur() {
     if  (x.length < 3) {
         postalCodeError.style.display = "block";
         postalCodeError.style.display = "visible";
-        invalid[7] = postalCodeError.textContent;
+        invalid[8] = postalCodeError.textContent;
     } else {
-        valid[7] = "Postal Code: " + x + '\n';
+        valid[8] = "Postal Code: " + x + '\n';
     }
 }
 
@@ -203,6 +203,25 @@ function postalCodeFocus() {
 
 // ID Number
 
+var idNumber = document.getElementById('idNumber');
+var idNumberError = document.getElementById('idNumberError');
+
+idNumber.addEventListener('blur', idNumberBlur);
+function idNumberBlur() {    
+    let x = idNumber.value;
+    if  (x.length < 7 || x.length > 8 || x.includes('.') || x.includes('-')) {
+        idNumberError.style.display = "block";
+        idNumberError.style.display = "visible";
+        invalid[9] = idNumberError.textContent;
+    } else {
+        valid[9] = "Id Number: " + x + '\n';
+    }
+}
+
+idNumber.addEventListener("focus", idNumberFocus);
+function idNumberFocus() {
+    idNumberError.style.display = "none";
+}
 
 // Send Button
 
