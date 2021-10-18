@@ -159,9 +159,47 @@ function addressFocus() {
 
 // City
 
+var city = document.getElementById('city');
+var cityError = document.getElementById('cityError');
+
+city.addEventListener('blur', cityBlur);
+function cityBlur() {    
+    let x = city.value;
+    if  (x.length < 3) {
+        cityError.style.display = "block";
+        cityError.style.display = "visible";
+        invalid[7] = cityError.textContent;
+    } else {
+        valid[7] = "City: " + x + '\n';
+    }
+}
+
+city.addEventListener("focus", cityFocus);
+function cityFocus() {
+    cityError.style.display = "none";
+}
 
 // Postal Code
 
+var postalCode = document.getElementById('postalCode');
+var postalCodeError = document.getElementById('postalCodeError');
+
+postalCode.addEventListener('blur', postalCodeBlur);
+function postalCodeBlur() {    
+    let x = postalCode.value;
+    if  (x.length < 3) {
+        postalCodeError.style.display = "block";
+        postalCodeError.style.display = "visible";
+        invalid[7] = postalCodeError.textContent;
+    } else {
+        valid[7] = "Postal Code: " + x + '\n';
+    }
+}
+
+postalCode.addEventListener("focus", postalCodeFocus);
+function postalCodeFocus() {
+    postalCodeError.style.display = "none";
+}
 
 // ID Number
 
