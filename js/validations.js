@@ -233,7 +233,7 @@ function idNumberFocus() {
     idNumberError.style.display = 'none';
 }
 
-// Send Button
+// Submit form button
 
 var form = document.getElementById('form')
 
