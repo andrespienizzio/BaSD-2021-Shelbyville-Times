@@ -405,17 +405,18 @@ label {
 
 input {
   width: 90%;
+  margin-bottom: 4%;
   font-size: 100%;
   color: #434344;
-  margin-bottom: 4%;
 }
 
 .errorMessage {
   position: relative;
   display: none; 
-  color: #FF0000;
+  width: 90%;
   margin-top: -10px;
   margin-bottom: 10px;
+  color: #FF0000;
   line-height: 15px;
   font-size: 60%;
 }
