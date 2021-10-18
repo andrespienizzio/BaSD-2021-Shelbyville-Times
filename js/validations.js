@@ -25,216 +25,216 @@ fullName.onblur =
             valid[0] = 'error'; 
         } else {
             valid[0] = 'Full Name: ' + x + '\n';
+            emptyError.fullName = null;
         }
     } 
-
 
 // Email
 
 var email = document.getElementById('email');
 var emailError = document.getElementById('emailError');
 
-email.addEventListener('blur', emailBlur);
-function emailBlur() {    
-    var x = email.value;
-    if (x.indexOf('@') == -1 || x.indexOf('.') == -1 || x.includes(' ') || x.indexOf('.') == email.length - 1){        
-        emailError.style.display = 'block';
-        emailError.style.display = 'visible';
-        invalid[1] = emailError.textContent;
-        valid[1] = 'error'; 
-    } else {
-        valid[1] = 'Email: ' + x + '\n';
+email.onfocus = 
+    function emailFocus() {
+        emailError.style.display = 'none';
     }
-}
 
-email.addEventListener('focus', emailFocus);
-function emailFocus() {
-    emailError.style.display = 'none';
-}
+email.onblur = 
+    function emailBlur() {    
+        var x = email.value;
+        if (x.indexOf('@') == -1 || x.indexOf('.') == -1 || x.includes(' ') || x.indexOf('.') == email.length - 1){        
+            emailError.style.display = 'block';
+            emailError.style.display = 'visible';
+            invalid[1] = emailError.textContent;
+            valid[1] = 'error'; 
+        } else {
+            valid[1] = 'Email: ' + x + '\n';
+        }
+    }
 
 // Password
 
 var password = document.getElementById('password');
 var passwordError = document.getElementById('passwordError');
 
-password.addEventListener('blur', passwordBlur);
-function passwordBlur() {    
-    var x = password.value;
-    if  (x.length < 8 || x.search(/\w/) < 0 || x.search(/\d/) < 0) {
-        passwordError.style.display = 'block';
-        passwordError.style.display = 'visible';
-        invalid[2] = passwordError.textContent;
-        valid[2] = 'error'; 
-    } else {
-        valid[2] = 'Password: ' + x + '\n';
+password.onfocus = 
+    function passwordFocus() {
+        passwordError.style.display = 'none';
     }
-}
 
-password.addEventListener('focus', passwordFocus);
-function passwordFocus() {
-    passwordError.style.display = 'none';
-}
+password.onblur = 
+    function passwordBlur() {    
+        var x = password.value;
+        if  (x.length < 8 || x.search(/\w/) < 0 || x.search(/\d/) < 0) {
+            passwordError.style.display = 'block';
+            passwordError.style.display = 'visible';
+            invalid[2] = passwordError.textContent;
+            valid[2] = 'error'; 
+        } else {
+            valid[2] = 'Password: ' + x + '\n';
+        }
+    }
 
 // Confirm Password
 
 var confirmPassword = document.getElementById('confirmPassword');
 var confirmPasswordError = document.getElementById('confirmPasswordError');
 
-confirmPassword.addEventListener('blur', confirmPasswordBlur);
-function confirmPasswordBlur() {    
-    var x = confirmPassword.value;
-    if  (x !== password.value) {
-        confirmPasswordError.style.display = 'block';
-        confirmPasswordError.style.display = 'visible';
-        invalid[3] = confirmPasswordError.textContent;
-        valid[3] = 'error'; 
-    } else {
-        valid[3] = 'Confirm Password: ' + x + '\n';
+confirmPassword.onfocus = 
+    function confirmPasswordFocus() {
+        confirmPasswordError.style.display = 'none';
     }
-}
 
-confirmPassword.addEventListener('focus', confirmPasswordFocus);
-function confirmPasswordFocus() {
-    confirmPasswordError.style.display = 'none';
-}
+confirmPassword.onblur = 
+    function confirmPasswordBlur() {    
+        var x = confirmPassword.value;
+        if  (x !== password.value) {
+            confirmPasswordError.style.display = 'block';
+            confirmPasswordError.style.display = 'visible';
+            invalid[3] = confirmPasswordError.textContent;
+            valid[3] = 'error'; 
+        } else {
+            valid[3] = 'Confirm Password: ' + x + '\n';
+        }
+    }
 
 // Age
 
 var age = document.getElementById('age');
 var ageError = document.getElementById('ageError');
 
-age.addEventListener('blur', ageBlur);
-function ageBlur() {    
-    var x = age.value;
-    if  (x < 17) {
-        ageError.style.display = 'block';
-        ageError.style.display = 'visible';
-        invalid[4] = ageError.textContent;
-        valid[4] = 'error'; 
-    } else {
-        valid[4] = 'Age: ' + x + '\n';
+age.onfocus = 
+    function ageFocus() {
+        ageError.style.display = 'none';
     }
-}
 
-age.addEventListener('focus', ageFocus);
-function ageFocus() {
-    ageError.style.display = 'none';
-}
+age.onblur = 
+    function ageBlur() {    
+        var x = age.value;
+        if  (x < 17) {
+            ageError.style.display = 'block';
+            ageError.style.display = 'visible';
+            invalid[4] = ageError.textContent;
+            valid[4] = 'error'; 
+        } else {
+            valid[4] = 'Age: ' + x + '\n';
+        }
+    }
 
 // Phone Number
 
 var phone = document.getElementById('phone');
 var phoneError = document.getElementById('phoneError');
 
-phone.addEventListener('blur', phoneBlur);
-function phoneBlur() {    
-    var x = phone.value;
-    if  (x.length < 7 || x.includes('.') || x.includes('-')) {
-        phoneError.style.display = 'block';
-        phoneError.style.display = 'visible';
-        invalid[5] = phoneError.textContent;
-        valid[5] = 'error'; 
-    } else {
-        valid[5] = 'Phone: ' + x + '\n';
+phone.onfocus = 
+    function phoneFocus() {
+        phoneError.style.display = 'none';
     }
-}
 
-phone.addEventListener('focus', phoneFocus);
-function phoneFocus() {
-    phoneError.style.display = 'none';
-}
+phone.onblur = 
+    function phoneBlur() {    
+        var x = phone.value;
+        if  (x.length < 7 || x.includes('.') || x.includes('-')) {
+            phoneError.style.display = 'block';
+            phoneError.style.display = 'visible';
+            invalid[5] = phoneError.textContent;
+            valid[5] = 'error'; 
+        } else {
+            valid[5] = 'Phone: ' + x + '\n';
+        }
+    }
 
 // Address
 
 var address = document.getElementById('address');
 var addressError = document.getElementById('addressError');
 
-address.addEventListener('blur', addressBlur);
-function addressBlur() {    
-    var x = address.value;
-    if  (x.length < 6 || x.indexOf(' ') <= 1 || x.search(/\d/) < 0 || x.search(/[a-z]/) < 0) {
-        addressError.style.display = 'block';
-        addressError.style.display = 'visible';
-        invalid[6] = addressError.textContent;
-        valid[6] = 'error'; 
-    } else {
-        valid[6] = 'Address: ' + x + '\n';
+address.onfocus = 
+    function addressFocus() {
+        addressError.style.display = 'none';
     }
-}
 
-address.addEventListener('focus', addressFocus);
-function addressFocus() {
-    addressError.style.display = 'none';
-}
+address.onblur = 
+    function addressBlur() {    
+        var x = address.value;
+        if  (x.length < 6 || x.indexOf(' ') <= 1 || x.search(/\d/) < 0 || x.search(/[a-z]/) < 0) {
+            addressError.style.display = 'block';
+            addressError.style.display = 'visible';
+            invalid[6] = addressError.textContent;
+            valid[6] = 'error'; 
+        } else {
+            valid[6] = 'Address: ' + x + '\n';
+        }
+    }
 
 // City
 
 var city = document.getElementById('city');
 var cityError = document.getElementById('cityError');
 
-city.addEventListener('blur', cityBlur);
-function cityBlur() {    
-    var x = city.value;
-    if  (x.length < 3) {
-        cityError.style.display = 'block';
-        cityError.style.display = 'visible';
-        invalid[7] = cityError.textContent;
-        valid[7] = 'error'; 
-    } else {
-        valid[7] = 'City: ' + x + '\n';
+city.onfocus = 
+    function cityFocus() {
+        cityError.style.display = 'none';
     }
-}
 
-city.addEventListener('focus', cityFocus);
-function cityFocus() {
-    cityError.style.display = 'none';
-}
+city.onblur = 
+    function cityBlur() {    
+        var x = city.value;
+        if  (x.length < 3) {
+            cityError.style.display = 'block';
+            cityError.style.display = 'visible';
+            invalid[7] = cityError.textContent;
+            valid[7] = 'error'; 
+        } else {
+            valid[7] = 'City: ' + x + '\n';
+        }
+    }
 
 // Postal Code
 
 var postalCode = document.getElementById('postalCode');
 var postalCodeError = document.getElementById('postalCodeError');
 
-postalCode.addEventListener('blur', postalCodeBlur);
-function postalCodeBlur() {    
-    var x = postalCode.value;
-    if  (x.length < 3) {
-        postalCodeError.style.display = 'block';
-        postalCodeError.style.display = 'visible';
-        invalid[8] = postalCodeError.textContent;
-        valid[8] = 'error'; 
-    } else {
-        valid[8] = 'Postal Code: ' + x + '\n';
+postalCode.onfocus = 
+    function postalCodeFocus() {
+        postalCodeError.style.display = 'none';
     }
-}
 
-postalCode.addEventListener('focus', postalCodeFocus);
-function postalCodeFocus() {
-    postalCodeError.style.display = 'none';
-}
+postalCode.onblur = 
+    function postalCodeBlur() {    
+    var x = postalCode.value;
+        if  (x.length < 3) {
+            postalCodeError.style.display = 'block';
+            postalCodeError.style.display = 'visible';
+            invalid[8] = postalCodeError.textContent;
+            valid[8] = 'error'; 
+        } else {
+            valid[8] = 'Postal Code: ' + x + '\n';
+        }
+    }
 
 // ID Number
 
 var idNumber = document.getElementById('idNumber');
 var idNumberError = document.getElementById('idNumberError');
 
-idNumber.addEventListener('blur', idNumberBlur);
-function idNumberBlur() {    
-    var x = idNumber.value;
-    if  (x.length < 7 || x.length > 8 || x.includes('.') || x.includes('-')) {
-        idNumberError.style.display = 'block';
-        idNumberError.style.display = 'visible';
-        invalid[9] = idNumberError.textContent;
-        valid[9] = 'error'; 
-    } else {
-        valid[9] = 'Id Number: ' + x + '\n';
+idNumber.onfocus = 
+    function idNumberFocus() {
+        idNumberError.style.display = 'none';
     }
-}
 
-idNumber.addEventListener('focus', idNumberFocus);
-function idNumberFocus() {
-    idNumberError.style.display = 'none';
-}
+idNumber.onblur = 
+    function idNumberBlur() {    
+    var x = idNumber.value;
+        if  (x.length < 7 || x.length > 8 || x.includes('.') || x.includes('-')) {
+            idNumberError.style.display = 'block';
+            idNumberError.style.display = 'visible';
+            invalid[9] = idNumberError.textContent;
+            valid[9] = 'error'; 
+        } else {
+            valid[9] = 'Id Number: ' + x + '\n';
+        }
+    }
 
 // Submit form button
 
@@ -252,7 +252,6 @@ function formSend() {
         alert(valid.join(' '));
     }
 }
-
 
 // BONUS
 
