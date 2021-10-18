@@ -25,7 +25,6 @@ fullName.onblur =
             valid[0] = 'error'; 
         } else {
             valid[0] = 'Full Name: ' + x + '\n';
-            emptyError.fullName = null;
         }
     } 
 
@@ -255,30 +254,13 @@ function formSend() {
 
 // BONUS
 
-
-    /*
-
-    var bonus = document.getElementsByTagName('fullName');
-
-    function runEvent() {
-        console.log
-    }
-
-
-
-
-    var itemInput = document.querySelector('input[type='text']');
-
-    itemInput.addEventListener('keydown', runEvent);
-
-
-    function runEvent(e) {
-        console.log('evnet'+e.type);
-        console.log(e.target.value);
-
-
-    } */
-
+var bonus = document.getElementById('bonusName');
+fullName.addEventListener('focus', bonusName);
+fullName.addEventListener('keydown', bonusName);
+fullName.addEventListener('keyup', bonusName);
+function bonusName(fullName) {
+    bonus.innerHTML = 'Hello ' + fullName.target.value + '!';
+}
 
 // Validation model
 
@@ -299,9 +281,3 @@ function formSend() {
         fullNameFocus()
     }
 } */
-
-
-
-
-    
-
