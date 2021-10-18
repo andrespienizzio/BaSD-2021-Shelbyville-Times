@@ -414,6 +414,8 @@ input {
   position: relative;
   display: none; 
   color: #FF0000;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  line-height: 15px;
   font-size: 60%;
-  top: -10px;
 }

@@ -14,7 +14,6 @@ function fullNameBlur() {
         fullNameError.style.display = "visible";
         invalid[0] = fullNameError.textContent;
     } else {
-        fullNameError.style.display = "0";
         valid[0] = "Full Name: " + x + '\n';
     }
 }
@@ -37,7 +36,6 @@ function emailBlur() {
         emailError.style.display = "visible";
         invalid[1] = emailError.textContent;
     } else {
-        emailError.style.display = "0";
         valid[1] = "Email: " + x + '\n';
     }
 }
@@ -55,13 +53,12 @@ var passwordError = document.getElementById('passwordError');
 password.addEventListener('blur', passwordBlur);
 function passwordBlur() {    
     let x = password.value;
-    if (x.indexOf('@') == -1 || x.indexOf('.') == -1 || x.includes(' ') || x.indexOf('.') == password.length - 1){        
+    if  (x.length < 8 || x.search(/\w/) < 0 || x.search(/\d/) < 0) {
         passwordError.style.display = "block";
         passwordError.style.display = "visible";
         invalid[1] = passwordError.textContent;
     } else {
-        passwordError.style.display = "0";
-        valid[1] = "password: " + x + '\n';
+        valid[1] = "Password: " + x + '\n';
     }
 }
 
@@ -71,6 +68,9 @@ function passwordFocus() {
 }
 
 // Confirm Password
+
+
+
 
 
 // Age
