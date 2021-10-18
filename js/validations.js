@@ -11,7 +11,7 @@ var fullNameError = document.getElementById('fullNameError');
 fullName.addEventListener('blur', fullNameBlur);
 function fullNameBlur() {    
     let x = fullName.value;
-    if (x.length < 6 || x.indexOf(' ') <= 1) {        
+    if (x.length < 7 || x.indexOf(' ') <= 0 || x.indexOf(' ') == x.length -1) {        
         fullNameError.style.display = 'block';
         fullNameError.style.display = 'visible';
         invalid[0] = fullNameError.textContent;
