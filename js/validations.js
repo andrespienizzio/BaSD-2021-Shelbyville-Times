@@ -56,9 +56,9 @@ function passwordBlur() {
     if  (x.length < 8 || x.search(/\w/) < 0 || x.search(/\d/) < 0) {
         passwordError.style.display = "block";
         passwordError.style.display = "visible";
-        invalid[1] = passwordError.textContent;
+        invalid[2] = passwordError.textContent;
     } else {
-        valid[1] = "Password: " + x + '\n';
+        valid[2] = "Password: " + x + '\n';
     }
 }
 
@@ -69,9 +69,25 @@ function passwordFocus() {
 
 // Confirm Password
 
+var confirmPassword = document.getElementById('confirmPassword');
+var confirmPasswordError = document.getElementById('confirmPasswordError');
 
+confirmPassword.addEventListener('blur', confirmPasswordBlur);
+function confirmPasswordBlur() {    
+    let x = confirmPassword.value;
+    if  (x !== password.value || x.length == 0) {
+        confirmPasswordError.style.display = "block";
+        confirmPasswordError.style.display = "visible";
+        invalid[3] = confirmPasswordError.textContent;
+    } else {
+        valid[3] = "Confirm Password: " + x + '\n';
+    }
+}
 
-
+confirmPassword.addEventListener("focus", confirmPasswordFocus);
+function confirmPasswordFocus() {
+    confirmPasswordError.style.display = "none";
+}
 
 // Age
 
