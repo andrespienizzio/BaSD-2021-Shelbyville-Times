@@ -394,7 +394,7 @@ form {
 }
 
 #sendButton:active {
-  background-color: red;
+  background-color: #FF0000;
   color: #f8f8f5;
 }
 
@@ -408,4 +408,12 @@ input {
   font-size: 100%;
   color: #434344;
   margin-bottom: 4%;
+}
+
+.errorMessage {
+  position: relative;
+  visibility: hidden;
+  color: #FF0000;
+  font-size: 80%;
+  top: -10px;
 }
