@@ -327,6 +327,7 @@ function formSend() {
             modalMessages.innerHTML = (valid.join(' '));
             modalContainer.style.display = 'flex';
             saveLocalStorage();
+            console.log(data);
         })
         .catch(function(error) {
             console.log(error);
@@ -366,6 +367,16 @@ function getLocalStorage() {
 };
 
 window.onload = getLocalStorage();
+
+
+// Close modal
+
+var modalButton = document.getElementById('modalButton');
+var closeModal = document.getElementById('modalContainer');
+
+modalButton.onclick = function() {
+    closeModal.style.display = 'none';
+}
 
 /* 
 fetch(url)
