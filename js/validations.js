@@ -244,7 +244,7 @@ form.addEventListener('submit', formSend);
 function formSend() {
     if (valid.includes('error')) {
         alert(invalid.join(' '));
-    } else if (valid.length == 0) {
+    } else if (valid.length <= 20) {
         alert('You have to complete the form before send!');
     } else {
         alert('The form was sent successfully!');
@@ -281,3 +281,6 @@ function bonusName(fullName) {
         fullNameFocus()
     }
 } */
+
+// Week 6
+
