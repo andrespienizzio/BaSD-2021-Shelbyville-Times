@@ -4,6 +4,7 @@
 
 var valid = [];
 var invalid = [];
+var emptyFormError = 0;
 
 // Full Name
  
@@ -25,6 +26,7 @@ fullName.onblur =
             valid[0] = 'error'; 
         } else {
             valid[0] = 'Full Name: ' + x + '\n';
+            emptyFormError += 1;
         }
     } 
 
@@ -48,6 +50,7 @@ email.onblur =
             valid[1] = 'error'; 
         } else {
             valid[1] = 'Email: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -71,6 +74,7 @@ password.onblur =
             valid[2] = 'error'; 
         } else {
             valid[2] = 'Password: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -94,6 +98,7 @@ confirmPassword.onblur =
             valid[3] = 'error'; 
         } else {
             valid[3] = 'Confirm Password: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -117,6 +122,7 @@ age.onblur =
             valid[4] = 'error'; 
         } else {
             valid[4] = 'Age: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -140,6 +146,7 @@ phone.onblur =
             valid[5] = 'error'; 
         } else {
             valid[5] = 'Phone: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -163,6 +170,7 @@ address.onblur =
             valid[6] = 'error'; 
         } else {
             valid[6] = 'Address: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -186,6 +194,7 @@ city.onblur =
             valid[7] = 'error'; 
         } else {
             valid[7] = 'City: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -209,6 +218,7 @@ postalCode.onblur =
             valid[8] = 'error'; 
         } else {
             valid[8] = 'Postal Code: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -232,6 +242,7 @@ idNumber.onblur =
             valid[9] = 'error'; 
         } else {
             valid[9] = 'Id Number: ' + x + '\n';
+            emptyFormError += 1;
         }
     }
 
@@ -244,13 +255,14 @@ form.addEventListener('submit', formSend);
 function formSend() {
     if (valid.includes('error')) {
         alert(invalid.join(' '));
-    } else if (valid.length <= 20) {
-        alert('You have to complete the form before send!');
+    } else if (emptyFormError < 10) {
+        alert('You have to complete the form before send!'); 
     } else {
         alert('The form was sent successfully!');
         alert(valid.join(' '));
     }
 }
+
 
 // BONUS
 
@@ -282,5 +294,29 @@ function bonusName(fullName) {
     }
 } */
 
-// Week 6
+        // --------- Week 6 --------- // 
+
+// Submit validations
+
+var URL = "http://curso-dev-2021.herokuapp.com/newsletter";
+
+var dataStorage = function () {
+    localStorage.setItem('name', fullName.value);
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('password', password.value);
+    localStorage.setItem('confirm password', confirmPassword.value);
+    localStorage.setItem('age', age.value);
+    localStorage.setItem('phone number', phone.value);
+    localStorage.setItem('address', address.value);
+    localStorage.setItem('city', city.value);
+    localStorage.setItem('postal code', postalCode.value);
+    localStorage.setItem('id number', idNumber.value);
+}
+
+
+
+
+
+
+
 

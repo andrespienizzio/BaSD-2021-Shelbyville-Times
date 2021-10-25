@@ -470,16 +470,17 @@ input {
 }
 
 #modal-title {
-  color: #fff;
   text-align: center;
+  color: #fff;
   font-size: 90%;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 #modal-message{
-  font-size: 80%;
   margin-top: 5%;
+  line-height: 1.5;
   color: #fff;
   text-align: center;
-  line-height: 1.5;
+  font-size: 80%;
 } 
