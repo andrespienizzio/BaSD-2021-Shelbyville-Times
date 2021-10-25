@@ -95,7 +95,54 @@ The github pages tool was used to view the page without needing to download the 
 **Link:**
 ```sh
 https://andrespienizzio.github.io/shelbyville-times/subscription.html
+
 ```
+---
+
+## WEEK N° 6
+
+---
+
+#### OBJECTIVES
+
+The challenge of Week N° 6 consists of expanding the online diary of week 05 so that by pressing the "send" button the data loaded in the form will be sent to a web server through an HTTP call from JavaScript.
+
+The conditions that must be accomplished are:
+
+* In case the data validation is correct: all the form data must be sent to the URL: http://curso-dev-2021.herokuapp.com/newsletter.  
+* Upon receiving the answer it must display a poster (modal) with a message indicating whether the newsletter subscription was successful or not.
+* If successful, the modal should also display the data received as a response from the HTTP call and the received data must be saved to LocalStorage.
+* In case the response code indicates an error, the modal should show details of the error and nothing should be saved in LocalStorage.
+
+#### GITHUB PAGES - SUBSCRIPTION FORM
+
+The github pages tool was used to view the page without needing to download the content of the repository.
+
+**Link:**
+```sh
+https://andrespienizzio.github.io/shelbyville-times/subscription.html
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 [df1]: <https://www.w3schools.com/css/css_website_layout.asp>
