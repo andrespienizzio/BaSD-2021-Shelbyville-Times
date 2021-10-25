@@ -423,7 +423,7 @@ input {
 
     /* --- Modal --- */
     
-#modal-container {
+#modalContainer {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -442,7 +442,7 @@ input {
   background-color: #000;
 }
 
-#modal-top {
+#modalTop {
   display: flex;
   margin-left: 90%;
 }
@@ -469,18 +469,18 @@ input {
   color: #f8f8f5;
 }
 
-#modal-title {
+#modalTitle {
   text-align: center;
   color: #fff;
   font-size: 90%;
   text-transform: uppercase;
+  text-decoration: underline;
   font-weight: bold;
 }
 
-#modal-message{
-  margin-top: 5%;
+#modalMessages {
   line-height: 1.5;
   color: #fff;
   text-align: center;
-  font-size: 80%;
+  font-size: 90%;
 } 
