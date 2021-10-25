@@ -248,7 +248,7 @@ idNumber.onblur =
 
 // Submit form button
 
-var form = document.getElementById('form')
+/* var form = document.getElementById('form');
 
 form.addEventListener('submit', formSend);
 
@@ -261,8 +261,7 @@ function formSend() {
         alert('The form was sent successfully!');
         alert(valid.join(' '));
     }
-}
-
+} */
 
 // BONUS
 
@@ -298,9 +297,47 @@ function bonusName(fullName) {
 
 // Submit validations
 
-var URL = "http://curso-dev-2021.herokuapp.com/newsletter";
+var url = 'http://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
++ '&confirmPassword=' + confirmPassword.value + '&age=' + age.value + '&phone=' + phone.value 
++ '&address=' + address.value + '&city=' + city.value + '&postalCode=' + postalCode.value+ '&id=' + idNumber.value;
 
-var dataStorage = function () {
+var modalErrors = invalid.join(' ');
+
+var form = document.getElementById('form');
+
+form.addEventListener('submit', formSend);
+
+function formSend() {
+    if (valid.includes('error')) {
+        modalTitle.innerHTML = 'ERROR!';
+        modalMessages.innerHTML += '<li>' + invalid.join(' ') + '<li>' ;
+        modalContainer.style.display = 'flex';
+        modalContainer.style.backgroundColor = '#FF0000';
+    } else if (emptyFormError < 10) {
+        modalTitle.innerHTML = 'You have to complete the form before send!';
+        modalContainer.style.display = 'flex';
+        modalContainer.style.backgroundColor = '#434344';
+    } else {
+        fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            modalTitle.innerHTML = 'The form was sent successfully!';
+            modalMessages.innerHTML = (valid.join(' '));
+            modalContainer.style.display = 'flex';
+            saveLocalStorage();
+        })
+        .catch(function(error) {
+            console.log(error);
+            modalTitle.innerHTML = 'There was a problem sending the form!';
+        })
+    }    
+} 
+
+// Save to local storage
+
+var saveLocalStorage = function () {
     localStorage.setItem('name', fullName.value);
     localStorage.setItem('email', email.value);
     localStorage.setItem('password', password.value);
@@ -313,10 +350,38 @@ var dataStorage = function () {
     localStorage.setItem('id number', idNumber.value);
 }
 
+// Get Local Storage
+
+function getLocalStorage() {
+    fullName.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
+    email.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
+    password.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
+    confirmPassword.value = !!localStorage.getItem('confirm password') ? localStorage.getItem('confirm password') : null;
+    age.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
+    phone.value = !!localStorage.getItem('phone number') ? localStorage.getItem('phone number') : null;
+    address.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
+    city.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
+    postalCode.value = !!localStorage.getItem('postal code') ? localStorage.getItem('postal code') : null;
+    idNumber.value = !!localStorage.getItem('id number') ? localStorage.getItem('id number') : null;
+};
+
+window.onload = getLocalStorage();
+
+/* 
+fetch(url)
+    .then(function(response) {
+        console.log(response);
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+    })
+    .catch(function(error) {
+        console.log(error)
+    })
+ */
 
 
 
 
-
-
-
+ 

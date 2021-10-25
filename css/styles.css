@@ -447,7 +447,7 @@ input {
   margin-left: 90%;
 }
     
-#modal-button {
+#modalButton {
   padding: 5px;
   margin: 5px;
   width: 30px;
@@ -459,12 +459,12 @@ input {
   font-weight: bold;
 }
 
-#modal-button:hover {
+#modalButton:hover {
   background-color: #c4c1c1;
   color: #000;
 }
 
-#modal-button:active {
+#modalButton:active {
   background-color: #FF0000;
   color: #f8f8f5;
 }
