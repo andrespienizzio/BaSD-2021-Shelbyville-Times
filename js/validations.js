@@ -291,9 +291,24 @@ function bonusName(fullName) {
     } else {
         fullNameFocus()
     }
-} */
-
+}
+ */
         // --------- Week 6 --------- // 
+
+// Stop automatic reload
+
+function stopReload(){
+    return false;
+ }
+
+// Close modal
+
+var modalButton = document.getElementById('modalButton');
+var closeModal = document.getElementById('modalContainer');
+
+modalButton.onclick = function() {
+    closeModal.style.display = 'none';
+}
 
 // Submit validations
 
@@ -310,7 +325,7 @@ form.addEventListener('submit', formSend);
 function formSend() {
     if (valid.includes('error')) {
         modalTitle.innerHTML = 'ERROR!';
-        modalMessages.innerHTML += '<li>' + invalid.join(' ') + '<li>' ;
+        modalMessages.innerHTML = '<li>' + invalid.join('</li><li>') + '</li>'; 
         modalContainer.style.display = 'flex';
         modalContainer.style.backgroundColor = '#FF0000';
     } else if (emptyFormError < 10) {
@@ -324,7 +339,7 @@ function formSend() {
         })
         .then(function(data) {
             modalTitle.innerHTML = 'The form was sent successfully!';
-            modalMessages.innerHTML = (valid.join(' '));
+            modalMessages.innerHTML = valid;
             modalContainer.style.display = 'flex';
             saveLocalStorage();
             console.log(data);
@@ -336,7 +351,21 @@ function formSend() {
     }    
 } 
 
-// Save to local storage
+/* 
+fetch(url)
+    .then(function(response) {
+        console.log(response);
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+    })
+    .catch(function(error) {
+        console.log(error)
+    })
+ */
+
+// Save to local storage/* 
 
 var saveLocalStorage = function () {
     localStorage.setItem('name', fullName.value);
@@ -366,33 +395,21 @@ function getLocalStorage() {
     idNumber.value = !!localStorage.getItem('id number') ? localStorage.getItem('id number') : null;
 };
 
-window.onload = getLocalStorage();
-
-
-// Close modal
-
-var modalButton = document.getElementById('modalButton');
-var closeModal = document.getElementById('modalContainer');
-
-modalButton.onclick = function() {
-    closeModal.style.display = 'none';
-}
-
-/* 
-fetch(url)
-    .then(function(response) {
-        console.log(response);
-        return response.json();
-    })
-    .then(function(data) {
-        console.log(data);
-    })
-    .catch(function(error) {
-        console.log(error)
-    })
- */
+window.onload = getLocalStorage(); 
 
 
 
+
+/* const API_URL = "http://jsonplaceholder.typicode.com";
+
+const HMTLResponse = document.getElementById("modalMessages");
+
+fetch('${API_URL}/users')
+    .then((response) => response.json())
+    .then((users) => {
+        const data = users.map((user) => '<li>${user.name} {user.email}<li>');
+        HMTLResponse.innerHTML = '<ul>${data}</ul>';
+
+    }); */
 
  
