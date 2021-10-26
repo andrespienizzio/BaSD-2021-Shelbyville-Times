@@ -273,26 +273,6 @@ function bonusName(fullName) {
     bonus.innerHTML = 'Hello ' + fullName.target.value + '!';
 }
 
-// Validation model
-
-/* function fullNameBlur() {    
-    var x = fullName.value;
-    if (x.length < 6) {
-        formErrors.classList.display('errorMessage');
-    } else if (x.indexOf(' ') <= 0) {
-        formErrors.fullName = 'Please insert your full name';
-    } else {
-        formErrors.fullName = null;
-    }
-    if (formErrors.fullName){
-        fullNameError.classList.re= 'block';
-        fullNameError.style.display = 'visible';
-        fullNameError.innerHTML = formErrors.fullName;
-    } else {
-        fullNameFocus()
-    }
-}
- */
         // --------- Week 6 --------- // 
 
 // Stop automatic reload
@@ -350,20 +330,6 @@ function formSend() {
         })
     }    
 } 
-
-/* 
-fetch(url)
-    .then(function(response) {
-        console.log(response);
-        return response.json();
-    })
-    .then(function(data) {
-        console.log(data);
-    })
-    .catch(function(error) {
-        console.log(error)
-    })
- */
 
 // Save to local storage/
 
