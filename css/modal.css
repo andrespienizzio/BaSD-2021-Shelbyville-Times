@@ -1,0 +1,63 @@
+/* --- Modal --- */
+
+#modalContainer {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  top: 50%;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px #f8f8f5 solid; 
+  background-color: #000;
+}
+
+#modalTop {
+  display: flex;
+  margin-left: 90%;
+}
+    
+#modalButton {
+  padding: 5px;
+  margin: 5px;
+  width: 30px;
+  border: 0px;
+  border-radius: 10px;
+  color: #FFF;
+  background-color: #434344;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#modalButton:hover {
+  background-color: #c4c1c1;
+  color: #000;
+}
+
+#modalButton:active {
+  background-color: #FF0000;
+  color: #f8f8f5;
+}
+
+#modalTitle {
+  text-align: center;
+  color: #fff;
+  font-size: 90%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#modalMessages {
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  font-size: 90%;
+}   

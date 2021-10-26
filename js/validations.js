@@ -398,8 +398,6 @@ function getLocalStorage() {
 window.onload = getLocalStorage(); 
 
 
-
-
 /* const API_URL = "http://jsonplaceholder.typicode.com";
 
 const HMTLResponse = document.getElementById("modalMessages");
