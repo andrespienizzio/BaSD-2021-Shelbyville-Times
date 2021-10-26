@@ -275,6 +275,47 @@ function bonusName(fullName) {
 
         // --------- Week 6 --------- // 
 
+// Submit validations
+
+var url = 'https://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
++ '&confirmPassword=' + confirmPassword.value + '&age=' + age.value + '&phone=' + phone.value 
++ '&address=' + address.value + '&city=' + city.value + '&postalCode=' + postalCode.value+ '&id=' + idNumber.value;
+
+var form = document.getElementById('form');
+
+var modalMessages = document.getElementById('modalMessages'); // I think this is unnecesary
+
+form.addEventListener('submit', formSend);
+
+function formSend() {
+    if (valid.includes('error')) {
+        modalTitle.innerHTML = 'ERROR!';
+        modalMessages.innerHTML = '<li>' + invalid.join('</li><li>') + '</li>'; // fix the problem with the blank spaces
+        modalContainer.style.display = 'flex';
+        modalContainer.style.backgroundColor = '#FF0000';
+    } else if (emptyFormError < 10) {
+        modalTitle.innerHTML = 'You have to complete the form before send!';
+        modalContainer.style.display = 'flex';
+        modalContainer.style.backgroundColor = '#434344';
+    } else {
+        fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            modalTitle.innerHTML = 'The form was sent successfully!';
+            modalMessages.innerHTML = valid.join; // fix the problem with the blank spaces
+            modalContainer.style.display = 'flex';
+            saveLocalStorage();
+            console.log(data);
+        })
+        .catch(function(error) {
+            console.log(error);
+            modalTitle.innerHTML = 'There was a problem sending the form!';
+        })
+    }    
+} 
+
 // Stop automatic reload
 
 function stopReload(){
@@ -289,47 +330,6 @@ var closeModal = document.getElementById('modalContainer');
 modalButton.onclick = function() {
     closeModal.style.display = 'none';
 }
-
-// Submit validations
-
-var url = 'https://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
-+ '&confirmPassword=' + confirmPassword.value + '&age=' + age.value + '&phone=' + phone.value 
-+ '&address=' + address.value + '&city=' + city.value + '&postalCode=' + postalCode.value+ '&id=' + idNumber.value;
-
-var modalErrors = invalid.join(' ');
-
-var form = document.getElementById('form');
-
-form.addEventListener('submit', formSend);
-
-function formSend() {
-    if (valid.includes('error')) {
-        modalTitle.innerHTML = 'ERROR!';
-        modalMessages.innerHTML = '<li>' + invalid.join('</li><li>') + '</li>'; 
-        modalContainer.style.display = 'flex';
-        modalContainer.style.backgroundColor = '#FF0000';
-    } else if (emptyFormError < 10) {
-        modalTitle.innerHTML = 'You have to complete the form before send!';
-        modalContainer.style.display = 'flex';
-        modalContainer.style.backgroundColor = '#434344';
-    } else {
-        fetch(url)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            modalTitle.innerHTML = 'The form was sent successfully!';
-            modalMessages.innerHTML = valid;
-            modalContainer.style.display = 'flex';
-            saveLocalStorage();
-            console.log(data);
-        })
-        .catch(function(error) {
-            console.log(error);
-            modalTitle.innerHTML = 'There was a problem sending the form!';
-        })
-    }    
-} 
 
 // Save to local storage/
 
