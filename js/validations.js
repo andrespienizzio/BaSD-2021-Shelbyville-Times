@@ -312,7 +312,7 @@ modalButton.onclick = function() {
 
 // Submit validations
 
-var url = 'http://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
+var url = 'https://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
 + '&confirmPassword=' + confirmPassword.value + '&age=' + age.value + '&phone=' + phone.value 
 + '&address=' + address.value + '&city=' + city.value + '&postalCode=' + postalCode.value+ '&id=' + idNumber.value;
 
