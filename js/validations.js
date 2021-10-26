@@ -365,7 +365,7 @@ fetch(url)
     })
  */
 
-// Save to local storage/* 
+// Save to local storage/
 
 var saveLocalStorage = function () {
     localStorage.setItem('name', fullName.value);
@@ -396,18 +396,4 @@ function getLocalStorage() {
 };
 
 window.onload = getLocalStorage(); 
-
-
-/* const API_URL = "http://jsonplaceholder.typicode.com";
-
-const HMTLResponse = document.getElementById("modalMessages");
-
-fetch('${API_URL}/users')
-    .then((response) => response.json())
-    .then((users) => {
-        const data = users.map((user) => '<li>${user.name} {user.email}<li>');
-        HMTLResponse.innerHTML = '<ul>${data}</ul>';
-
-    }); */
-
  
