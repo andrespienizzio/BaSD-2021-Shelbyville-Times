@@ -347,13 +347,13 @@ var saveLocalStorage = function () {
     localStorage.setItem('name', fullName.value);
     localStorage.setItem('email', email.value);
     localStorage.setItem('password', password.value);
-    localStorage.setItem('repeat password', confirmPassword.value);
+    localStorage.setItem('confirm password', confirmPassword.value);
     localStorage.setItem('age', age.value);
     localStorage.setItem('phone', phone.value);
     localStorage.setItem('address', address.value);
     localStorage.setItem('city', city.value);
     localStorage.setItem('postal code', postalCode.value);
-    localStorage.setItem('ID', idNumber.value);
+    localStorage.setItem('id number', idNumber.value);
 }; 
 
 // Get Local Storage
@@ -362,8 +362,9 @@ function getLocalStorage() {
     fullName.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
     email.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
     password.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
+    confirmPassword.value = !!localStorage.getItem('confirm password') ? localStorage.getItem('confirm password') : null;
     age.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
-    phone.value = !!localStorage.getItem('phone number') ? localStorage.getItem('phone number') : null;
+    phone.value = !!localStorage.getItem('phone') ? localStorage.getItem('phone') : null;
     address.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
     city.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
     postalCode.value = !!localStorage.getItem('postal code') ? localStorage.getItem('postal code') : null;
