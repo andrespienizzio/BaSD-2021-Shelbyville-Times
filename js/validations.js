@@ -277,46 +277,56 @@ function bonusName(fullName) {
 
 // Submit validations
 
-var url = 'https://curso-dev-2021.herokuapp.com/newsletter?nombre' + fullName.value + '&email=' + email.value + '&password=' + password.value 
-+ '&confirmPassword=' + confirmPassword.value + '&age=' + age.value + '&phone=' + phone.value 
-+ '&address=' + address.value + '&city=' + city.value + '&postalCode=' + postalCode.value+ '&id=' + idNumber.value;
-
 var form = document.getElementById('form');
-
-var modalMessages = document.getElementById('modalMessages'); // I think this is unnecesary
-
 form.addEventListener('submit', formSend);
 
 function formSend() {
-    if (valid.includes('error')) {
+    var url = 'https://curso-dev-2021.herokuapp.com/newsletter?name='+fullName.value+'&email='+email.value+'&password='+password.value
+    +'&age='+age.value+'&phoneNumber='+phone.value+'&address='+address.value+'&city='
+    +city.value+'&postalCode='+postalCode.value+'&id='+idNumber.value;
+    var modalMessages = document.getElementById('modalMessages'); // I think this is unnecesary
+    var modalTitle = document.getElementById('modalTitle'); // I think this is unnecesary
+    if (emptyFormError == 0) {
+        modalTitle.innerHTML = 'You have to complete the form before send!';
+        modalContainer.style.display = 'flex';
+        modalContainer.style.backgroundColor = '#434344';
+    } else if (valid.includes('error')) {
         modalTitle.innerHTML = 'ERROR!';
         modalMessages.innerHTML = '<li>' + invalid.join('</li><li>') + '</li>'; // fix the problem with the blank spaces
         modalContainer.style.display = 'flex';
         modalContainer.style.backgroundColor = '#FF0000';
-    } else if (emptyFormError < 10) {
-        modalTitle.innerHTML = 'You have to complete the form before send!';
-        modalContainer.style.display = 'flex';
-        modalContainer.style.backgroundColor = '#434344';
     } else {
         fetch(url)
-        .then(function(response) {
-            return response.json();
+        .then(function(res) {
+            if(res.status === 200) {
+                return res.json();
+            } else {
+                throw Error(res.status);
+            }
         })
         .then(function(data) {
-            modalTitle.innerHTML = 'The form was sent successfully!';
-            modalMessages.innerHTML = valid.join; // fix the problem with the blank spaces
+            if(fullName.value !== '' && email.value !== '' && password.value !== '' 
+            && age.value !== '' && phone.value !== '' && address.value !== '' && city.value !== '' 
+            && postalCode.value !== '' && idNumber.value !== '') {
+                modalTitle.innerHTML = 'The form was sent successfully!';
+                modalMessages.innerHTML = valid.join(' '); // fix the problem with the blank spaces
+                modalContainer.style.display = 'flex';
+                saveLocalStorage();
+                console.log(data);
+            } else {
+                modalTitle.innerHTML = 'You have to complete the form before tu vieja send!';
+                modalContainer.style.display = 'flex';
+                modalContainer.style.backgroundColor = '#434344';
+            }  
+        })
+        .catch(function(err) {
             modalContainer.style.display = 'flex';
-            saveLocalStorage();
-            console.log(data);
-        })
-        .catch(function(error) {
-            console.log(error);
-            modalTitle.innerHTML = 'There was a problem sending the form!';
-        })
-    }    
-} 
+            modalMessages.innerHTML = err;
+        }) 
+    }
+}
 
-// Stop automatic reload
+// Stop automatic reload after send
 
 function stopReload(){
     return false;
@@ -337,14 +347,14 @@ var saveLocalStorage = function () {
     localStorage.setItem('name', fullName.value);
     localStorage.setItem('email', email.value);
     localStorage.setItem('password', password.value);
-    localStorage.setItem('confirm password', confirmPassword.value);
+    localStorage.setItem('repeat password', confirmPassword.value);
     localStorage.setItem('age', age.value);
-    localStorage.setItem('phone number', phone.value);
+    localStorage.setItem('phone', phone.value);
     localStorage.setItem('address', address.value);
     localStorage.setItem('city', city.value);
     localStorage.setItem('postal code', postalCode.value);
-    localStorage.setItem('id number', idNumber.value);
-}
+    localStorage.setItem('ID', idNumber.value);
+}; 
 
 // Get Local Storage
 
@@ -352,7 +362,6 @@ function getLocalStorage() {
     fullName.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
     email.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
     password.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
-    confirmPassword.value = !!localStorage.getItem('confirm password') ? localStorage.getItem('confirm password') : null;
     age.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
     phone.value = !!localStorage.getItem('phone number') ? localStorage.getItem('phone number') : null;
     address.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
@@ -362,4 +371,3 @@ function getLocalStorage() {
 };
 
 window.onload = getLocalStorage(); 
- 
