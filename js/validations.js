@@ -297,12 +297,8 @@ function formSend() {
         modalContainer.style.backgroundColor = '#FF0000';
     } else {
         fetch(url)
-        .then(function(res) {
-            if(res.status === 200) {
-                return res.json();
-            } else {
-                throw Error(res.status);
-            }
+        .then(function (response){
+			return response.json();
         })
         .then(function(data) {
             if(fullName.value !== '' && email.value !== '' && password.value !== '' 
@@ -314,7 +310,7 @@ function formSend() {
                 saveLocalStorage();
                 console.log(data);
             } else {
-                modalTitle.innerHTML = 'You have to complete the form before tu vieja send!';
+                modalTitle.innerHTML = 'You have to complete the form send!';
                 modalContainer.style.display = 'flex';
                 modalContainer.style.backgroundColor = '#434344';
             }  
